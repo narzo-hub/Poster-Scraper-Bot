@@ -1,7 +1,6 @@
 from pyrogram import Client
 from pyrogram.enums import ParseMode
 from config import Config
-from .. import LOGGER
 
 EchoBot = Client(
     "EchoBotz",
