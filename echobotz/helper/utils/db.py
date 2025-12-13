@@ -69,7 +69,7 @@ class _DbManager:
                     continue
                 data = {k: v for k, v in doc.items() if k != "_id"}
                 user_data[uid] = data
-            LOGGER.info("Auth data loaded from DB")
+            LOGGER.info("Database loaded from MongoDB")
         except PyMongoError as e:
             LOGGER.error(f"_load_all error: {e}")
 

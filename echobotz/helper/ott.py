@@ -45,6 +45,8 @@ _CMD_TO_PROVIDER = {
     "adda": "addatimes", "ad": "addatimes",
     "stage": "stage", "stg": "stage",
     "netflix": "netflix", "nf": "netflix",
+    "mxplayer": "mxplayer",
+    "mx": "mxplayer",
     "youtube": "ytdl", "yt": "ytdl",
     "instagram": "instagram", "ig": "instagram",
     "facebook": "facebook", "fb": "facebook",
@@ -66,8 +68,8 @@ _PROVIDER_NAMES = {
     "addatimes": "Addatimes",
     "stage": "Stage",
     "netflix": "Netflix",
+    "mxplayer": "MX Player",
     "ytdl": "YouTube",
-
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok",
@@ -87,7 +89,8 @@ _WORKERS = {
     "plextv": "https://plextv.the-zake.workers.dev/?url=",
     "addatimes": "https://addatimes.the-zake.workers.dev/?url=",
     "stage": "https://stage.the-zake.workers.dev/?url=",
-    "netflix": "https://netflix.the-zake.workers.dev/?url=",
+    "netflix": "ttps://netflix.the-zake.workers.dev/?url=",
+    "mxplayer": "https://mxplayer.the-zake.workers.dev/?url=",
 
     "ytdl": "https://youtubedl.the-zake.workers.dev/?url=",
     "instagram": "https://instagramdl.the-zake.workers.dev/?url=",
@@ -127,22 +130,24 @@ def _normalize_ott_json(provider: str, data: dict):
         root = data
 
     poster = (
-        root.get("portrait")
-        or root.get("poster")
-        or root.get("poster_url")
-        or root.get("thumbnail")
-        or root.get("image")
-        or root.get("image_url")
-        or root.get("cover")
-        or root.get("thumb")
+    root.get("portrait")
+    or root.get("poster")
+    or root.get("poster_url")
+    or root.get("thumbnail")
+    or root.get("image")
+    or root.get("image_url")
+    or root.get("cover")
+    or root.get("thumb")
+    or root.get("images")  
     )
 
     landscape = (
-        root.get("landscape")
-        or root.get("landscape_url")
-        or root.get("backdrop")
-        or root.get("banner")
-        or root.get("fanart")
+    root.get("landscape")
+    or root.get("landscape_url")
+    or root.get("backdrop")
+    or root.get("banner")
+    or root.get("fanart")
+    or root.get("images")   
     )
 
     urls = []
@@ -185,10 +190,10 @@ def _normalize_ott_json(provider: str, data: dict):
         or "N/A"
     )
     year = (
-        root.get("year")
-        or root.get("release_year")
-        or root.get("release")
-        or "N/A"
+    root.get("year")
+    or (str(root.get("releaseDate"))[:4] if root.get("releaseDate") else None)
+    or root.get("release_year")
+    or "N/A"
     )
     otype = root.get("type") or root.get("kind") or "N/A"
 

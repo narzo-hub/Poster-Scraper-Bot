@@ -17,6 +17,7 @@ Powerful telegram bot that scrape Posters from multiple OTT platforms & Bypass d
 - PixelCDN
 - ExtraLink
 - LuxDrive
+- Nexdrive
 
 </details>
 
@@ -37,6 +38,7 @@ Powerful telegram bot that scrape Posters from multiple OTT platforms & Bypass d
 - Plex
 - Addatimes
 - Stage
+- Mx Player 
 
 </details>
 
@@ -70,6 +72,7 @@ Powerful telegram bot that scrape Posters from multiple OTT platforms & Bypass d
 /pixelcdn - Bypass PixelCDN links to direct links
 /extralink - Bypass ExtraLink links to direct links
 /luxdrive - Bypass LuxDrive links to direct links
+/nexdrive - Bypass NexDrive links to direct links
 /overlap - Overlay a logo on a poster
 /prime - Prime Video poster
 /netflix - Netflix poster
@@ -85,6 +88,7 @@ Powerful telegram bot that scrape Posters from multiple OTT platforms & Bypass d
 /plex - Plex TV poster
 /adda - Addatimes poster
 /stage - Stage poster
+/mxplayer - Mx Player Poster 
 /youtube - YouTube thumbnail
 /instagram - Instagram thumbnail
 /facebook - Facebook thumbnail
@@ -143,7 +147,9 @@ Powerful telegram bot that scrape Posters from multiple OTT platforms & Bypass d
 <details>
   <summary><strong>Render (One-Click Deploy)</strong></summary>
   
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/XalFH/Poster-Scraper-Bot)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](
+https://render.com/deploy?repo=https://github.com/XalFH/Poster-Scraper-Bot&branch=deploy
+)
 
 </details>
 

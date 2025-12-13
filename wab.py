@@ -1,7 +1,7 @@
-import os
-from http.server import BaseHTTPRequestHandler as a, HTTPServer as b
-PORT = int(os.environ.get("PORT", 8080))
-class A(a):
+from http.server import BaseHTTPRequestHandler, HTTPServer
+PORT = 8000  
+
+class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         body = b"@EchoBotz"
         self.send_response(200)
@@ -9,7 +9,8 @@ class A(a):
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+
 if __name__ == "__main__":
-    server = b(("0.0.0.0", PORT), A)
-    print(f"Port Bonded at {PORT}")
+    server = HTTPServer(("0.0.0.0", PORT), Handler)
+    print(f"WAB server bonded at {PORT}")
     server.serve_forever()

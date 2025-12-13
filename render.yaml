@@ -19,25 +19,11 @@ services:
         value: ebotz
       - key: OWNER_ID
         sync: false
-      - key: SUDO_USERS
-        sync: false
-      - key: AUTH_CHATS
-        sync: false
-      - key: PUBLIC_MODE
-        value: "True"
-      - key: WEB_SERVER
-        value: "true" 
-      - key: PING_URL
-        value: ""
-      - key: PING_TIME
-        value: "300"
-      - key: TIMEZONE
-        value: Asia/Kolkata
       - key: UPSTREAM_REPO
-        value: https://github.com/XalFH/Poster-Scraper-Bot
+        sync: false
       - key: UPSTREAM_BRANCH
-        value: main
-      - key: TMDB_ACCESS_TOKEN
         sync: false
       - key: PORT
         value: "80"
+      - key: WEB_SERVER
+        value: "true" 

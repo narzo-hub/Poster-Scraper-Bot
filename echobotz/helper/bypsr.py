@@ -30,16 +30,18 @@ _BYPASS_CMD_TO_SERVICE = {
     "pcdn": "pixelcdn",
     "extralink": "extralink",
     "luxdrive": "luxdrive",
+    "nexdrive": "nexdrive",
+    "nd": "nexdrive",
 }
 
 _BYPASS_ENDPOINTS = {
     # By : Hgbots
     "gdflix": "https://hgbots.vercel.app/bypaas/gd.php?url=",
-    "hubcloud": "https://hgbots.vercel.app/bypaas/hubcloud.php?url=",
     "hubdrive": "https://hgbots.vercel.app/bypaas/hubdrive.php?url=",  
    # By : NickUpdates 
     "transfer_it": "https://transfer-it-henna.vercel.app/post",
     # By: PBX1 
+    "hubcloud": "https://pbx1botapi.vercel.app/api/hubcloud?url=",
     "vcloud": "https://pbx1botapi.vercel.app/api/vcloud?url=",
     "hubcdn": "https://pbx1botapi.vercel.app/api/hubcdn?url=",
     "driveleech": "https://pbx1botapi.vercel.app/api/driveleech?url=",
@@ -49,6 +51,7 @@ _BYPASS_ENDPOINTS = {
     "extraflix": "https://pbx1botapi.vercel.app/api/extraflix?url=",
     "extralink": "https://pbx1botapi.vercel.app/api/extralink?url=",
     "luxdrive": "https://pbx1botapi.vercel.app/api/luxdrive?url=",
+    "nexdrive": "https://pbx1botsapi2.vercel.app/api/nexdrive?url=",
 }
 
 def _bp_srv(cmd):

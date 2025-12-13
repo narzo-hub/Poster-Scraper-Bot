@@ -21,11 +21,12 @@ class Config:
         if os.environ.get("AUTH_CHATS")
         else []
     )
-    
-    WEB_SERVER = os.environ.get("WEB_SERVER", "false").lower() == "true"
-    PING_URL = os.environ.get("PING_URL", "")
+    # For Koyeb/render 
+    WEB_SERVER = os.environ.get("WEB_SERVER", "false").lower() == "true" # Set True if deploying on koyeb/render else False
+    PING_URL = os.environ.get("PING_URL", "") # koyeb/render's base url
     PING_TIME = int(os.environ.get("PING_TIME", 300))
-
+    PORT = int(os.environ.get("PORT", 8080))
+   
     PUBLIC_MODE = os.environ.get("PUBLIC_MODE", "False").lower() == "true"
     TIMEZONE = os.environ.get("TIMEZONE", "Asia/Kolkata")
     

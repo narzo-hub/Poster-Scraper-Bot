@@ -12,6 +12,13 @@ from logging import (
 
 from config import Config
 
+install()
+
+bot_loop = asyncio.new_event_loop()
+asyncio.set_event_loop(bot_loop)
+
+from config import Config
+
 basicConfig(
     format="[%(asctime)s] [%(levelname)s] - %(message)s",
     datefmt="%d-%b-%y %I:%M:%S %p",
